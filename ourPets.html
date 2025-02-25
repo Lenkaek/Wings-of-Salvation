@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking fonts and style libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Our pets - Wings of Salvation</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav-container">
+            <!-- Organization logo -->
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Wings of <span>salvation</span>
+            </div>
+            <!-- Main menu links -->
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">About Us</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="ourPets.html">Our Pets</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="HowToAdopt.html">How to Adopt</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="Donations.html">Donations</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="News.html">News</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900"><a href="contact.html">Contacts</a></div>
+            </div>
+            <!-- Hamburger icon for adaptive menu -->
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">About Us</a>
+                <a href="ourPets.html">Our Pets</a>
+                <a href="HowToAdopt.html">How to Adopt</a>
+                <a href="News.html">News and Events</a>
+                <a href="contact.html">Contacts</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <ul class="cards">
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--fence"></div>
+            <div class="card__content">
+              <div class="card__title">Nika</div>
+              <p class="card__text">Nika is a playful and friendly little girl, looking for a loving family. Nika loves to play and easily finds a common language with children and other pets. </p>
+              <button class="btn-card btn--block card__btn">Adopt</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--river"></div>
+            <div class="card__content">
+              <div class="card__title">Ledi</div>
+              <p class="card__text">Meet ledi — an energetic puppy who loves to play and run outdoors. This friendly kid is looking for a family ready to give him love and care!</p>
+              <button class="btn-card btn--block card__btn">Adopt</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--record"></div>
+            <div class="card__content">
+              <div class="card__title">Lusi</div>
+              <p class="card__text">Lusi is a sweet dog with a kind heart. She loves walking and cozy evenings with people. Luna is ready to become a loyal friend for the whole family!</p>
+              <button class="btn-card btn--block card__btn">Adopt</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--flowers"></div>
+            <div class="card__content">
+              <div class="card__title">Mailo</div>
+              <p class="card__text">Mailo is a smart and active dog who loves to learn new tricks. He is looking for active hosts who are ready to spend time outside and play sports together!"</p>
+              <button class="btn-card btn--block card__btn">Adopt</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--lool"></div>
+            <div class="card__content">
+              <div class="card__title">Gerda</div>
+              <p class="card__text">Gerda is a calm and affectionate cat who loves cozy evenings on the couch. She will be a loyal friend and a great companion for the whole family.</p>
+              <button class="btn-card btn--block card__btn">How to Adopt</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--keek"></div>
+            <div class="card__content">
+              <div class="card__title">Grom</div>
+              <p class="card__text">Grom is an intelligent and independent cat with a bright personality. He loves to observe the world around him and is ready to become your faithful companion in life!.</p>
+              <button class="btn-card btn--block card__btn">How to Adopt</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+  <!-- Placeholder for Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ offset: 0 });</script>
+  <script src="script.js"></script>
+
+<!-- Linking animation and script libraries -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({offset: 0});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

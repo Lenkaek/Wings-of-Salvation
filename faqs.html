@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Including fonts and style libraries -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+       <link rel="stylesheet" href="style.css">
+    <title>FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .faq-item .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.open .answer {
+            max-height: 500px;
+            padding: 0.5rem 0;
+        }
+    </style>
+</head>
+    <!-- Navigation panel -->
+    <nav>
+        <div class="nav-container">
+            <!-- Organization logo -->
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Wings of <span>Salvation</span>
+            </div>
+            <!-- Main menu links -->
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">About Us</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="ourPets.html">Our Animals</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="HowToAdopt.html">How to Adopt</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="Donations.html">Donations</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="News.html">News</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900"><a href="contact.html">Contact Us</a></div>
+            </div>
+            <!-- Hamburger icon for responsive menu -->
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">About Us</a>
+                <a href="ourPets.html">Our Animals</a>
+                <a href="HowToAdopt.html">How to Adopt</a>
+                <a href="News.html">News & Events</a>
+                <a href="contact.html">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+
+        <div class="space-y-4">
+            <div class="faq-item bg-white rounded-lg shadow-md p-4" onclick="toggleFAQ(this)">
+                <h2 class="question text-xl font-semibold cursor-pointer flex justify-between items-center">
+                    What is the mission of the shelter?
+                    <span class="text-gray-500">+</span>
+                </h2>
+                <div class="answer text-gray-700">
+                    Our mission is to provide a safe haven for animals in need and to find loving homes for them. We strive to educate the community on responsible pet ownership and animal welfare.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white rounded-lg shadow-md p-4" onclick="toggleFAQ(this)">
+                <h2 class="question text-xl font-semibold cursor-pointer flex justify-between items-center">
+                    How can I adopt a pet?
+                    <span class="text-gray-500">+</span>
+                </h2>
+                <div class="answer text-gray-700">
+                    To adopt a pet, visit our shelter or check out our online gallery. Choose a pet and fill out the adoption form. Our team will guide you through the process.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white rounded-lg shadow-md p-4" onclick="toggleFAQ(this)">
+                <h2 class="question text-xl font-semibold cursor-pointer flex justify-between items-center">
+                    What are your operating hours?
+                    <span class="text-gray-500">+</span>
+                </h2>
+                <div class="answer text-gray-700">
+                    We are open from 10 AM to 6 PM, Monday through Saturday. We are closed on Sundays.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white rounded-lg shadow-md p-4" onclick="toggleFAQ(this)">
+                <h2 class="question text-xl font-semibold cursor-pointer flex justify-between items-center">
+                    Can I volunteer at the shelter?
+                    <span class="text-gray-500">+</span>
+                </h2>
+                <div class="answer text-gray-700">
+                    Yes, we welcome volunteers! Please contact us through our website or visit the shelter to learn more about volunteering opportunities.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white rounded-lg shadow-md p-4" onclick="toggleFAQ(this)">
+                <h2 class="question text-xl font-semibold cursor-pointer flex justify-between items-center">
+                    How can I donate to the shelter?
+                    <span class="text-gray-500">+</span>
+                </h2>
+                <div class="answer text-gray-700">
+                    You can donate through our website, by bank transfer, or in person at the shelter. Your contributions help us provide food, medical care, and shelter for animals in need.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(faqItem) {
+            const isOpen = faqItem.classList.contains('open');
+            const allFaqs = document.querySelectorAll('.faq-item');
+
+            allFaqs.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('open');
+                }
+            });
+
+            if (isOpen) {
+                faqItem.classList.remove('open');
+            } else {
+                faqItem.classList.add('open');
+            }
+        }
+    </script>
+
+
+  <!-- Placeholder for Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ offset: 0 });</script>
+  <script src="script.js"></script>
+
+
+    <!-- Including animation libraries and scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset: 0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
